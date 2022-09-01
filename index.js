@@ -10,7 +10,7 @@ mogoose.connect(
   "mongodb+srv://Itravel:Itravel@cluster0.etxy3om.mongodb.net/?retryWrites=true&w=majority"
 );
 
-app.listen(8000, () => {
+app.listen(800, () => {
   console.log("Server Is Up");
 });
 
