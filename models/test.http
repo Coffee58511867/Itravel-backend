@@ -1,12 +1,11 @@
-POST http://localhost:4000/app/register
+POST http://localhost:8000/registerDriver
 Content-Type: application/json
 
 {
     "username" : "hlalele",
      "phonenumber": 5621440,
-     "email": "hlalele.gmail.com",
-      "date" : "12 May 2020",
-      "gender": "Male",
+     "email": "hlalele6.gmail.com",
+     "licensenumber" : "12mtysgd",
       "location": "Masowe",
       "password": "123456",
       "confirm" : "123456"

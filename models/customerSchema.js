@@ -1,42 +1,52 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-let requestSchema = new Schema(
+let customerSchema = new Schema(
   {
+    username: {
+      type: String,
+      required: true,
+    },
+    phonenumber: {
+      type: Number,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+
+    date: {
+      type: String,
+      required: true,
+    },
+
+    regDate: {
+      type: Date,
+
+      required: true,
+    },
+    gender: {
+      type: String,
+      required: true,
+    },
     location: {
       type: String,
       required: true,
     },
-    seats: {
-      type: Number,
-      required: true,
-    },
-    passengerName: {
+    password: {
       type: String,
       required: true,
     },
-    homePickupTime: {
+    confirm: {
       type: String,
       required: true,
     },
-    schoolPickup: {
-      type: String,
-      required: true,
-    },
-    passengerGrade: {
-      type: Number,
-      required: true,
-    },
-    schoolName: {
-      type: String,
-      required: true,
-    },
-    parentContact: {
-      type: String,
-      required: true,
+    token: {
+      type:String,
     },
   },
   {
-    collection: "requests",
+    collection: "customers",
   }
 );
-module.exports = mongoose.model("customerrequest", requestSchema);
+module.exports = mongoose.model("customers", customerSchema);
