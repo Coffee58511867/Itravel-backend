@@ -14,16 +14,16 @@ let customerSchema = new Schema(
       type: String,
       required: true,
     },
-    date: {
-      type: date,
+    regDate: {
+      type: Date,
       required: true,
     },
     gender: {
-      type: string,
+      type: String,
       required: true,
     },
     location: {
-      type: string,
+      type: String,
       required: true,
     },
     password: {
@@ -34,9 +34,12 @@ let customerSchema = new Schema(
       type: String,
       required: true,
     },
+    token: {
+      type:String,
+    }
   },
   {
     collection: "customers",
   }
 );
-module.exports = mongoose.model("customerregister", customerSchema);
+module.exports = mongoose.model("customers", customerSchema);
