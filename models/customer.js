@@ -15,15 +15,15 @@ let customerSchema = new Schema(
       required: true,
     },
     date: {
-      type: date,
+      type: String,
       required: true,
     },
     gender: {
-      type: string,
+      type: String,
       required: true,
     },
     location: {
-      type: string,
+      type: String,
       required: true,
     },
     password: {
