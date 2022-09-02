@@ -1,42 +1,42 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-let requestSchema = new Schema(
+let driverSchema = new Schema(
   {
+    username: {
+      type: String,
+      required: true,
+    },
+    phonenumber: {
+      type: Number,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
     location: {
       type: String,
       required: true,
     },
-    seats: {
-      type: Number,
-      required: true,
-    },
-    passengerName: {
+    licensenumber: {
       type: String,
       required: true,
     },
-    homePickupTime: {
+    password: {
       type: String,
       required: true,
     },
-    schoolPickup: {
+    confirm: {
       type: String,
       required: true,
     },
-    passengerGrade: {
-      type: Number,
-      required: true,
+    token: {
+      type:String,
     },
-    schoolName: {
-      type: String,
-      required: true,
-    },
-    parentContact: {
-      type: String,
-      required: true,
-    },
+  
   },
   {
-    collection: "requests",
+    collection: "drivers",
   }
 );
-module.exports = mongoose.model("customerrequest", requestSchema);
+module.exports = mongoose.model("driverRegisteration", driverSchema);
